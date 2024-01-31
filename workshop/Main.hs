@@ -4,10 +4,6 @@ import Operations
 import System.Environment
 import Data.Maybe (fromMaybe)
 
--- Note pour Nao : La fonction DoOp ne peut prendre qu'un calcul ace deux chiffres(ex : 2 + 2, 2 * 2, 2 / 2 etc)
--- La fonction DoOp ne prends que les calculs avec des espaces entre chaques caractères( ex: "2+2" -> Ne marche pas mais "2 + 2" oui)
--- Ps: Stp mets moi présent c'est dure l'haskell
-
 doOp :: String -> Maybe Int
 doOp input = case words input of
     [x, "+", y] -> Just (addition (read x) (read y))
